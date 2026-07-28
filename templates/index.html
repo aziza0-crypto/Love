@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Студенты</title>
+</head>
+
+<body>
+
+<h1>Список студентов</h1>
+
+{% for student in students %}
+
+    <p>
+        {{ student.name }} —
+        {{ student.age }} лет,
+        {{ student.city }}
+    </p>
+
+{% empty %}
+
+    <p>Студентов пока нет</p>
+
+{% endfor %}
+
+</body>
+</html>
