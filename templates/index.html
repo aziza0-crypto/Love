@@ -193,8 +193,70 @@
     </div>
   </section>
 
-  <!-- ФУТЕР -->
- <!-- СТУДЕНТЫ ИЗ БАЗЫ -->
+  
+
+ <!-- ЗАЯВКА -->
+<section class="section" id="apply">
+
+<div class="container">
+
+<div class="section__head section__head--center">
+
+<h2 class="section__title">Оставить заявку</h2>
+
+<p class="section__sub">
+7 дней премиум-доступа бесплатно. Менеджер свяжется с вами.
+</p>
+
+</div>
+
+
+<form class="apply-form" method="POST">
+
+{% csrf_token %}
+
+<div class="apply-form__row">
+
+<input type="text" name="name" placeholder="Имя" required />
+
+<input type="tel" name="phone" placeholder="Телефон" required />
+
+</div>
+
+
+<input type="email" name="email" placeholder="Email" required />
+
+
+<textarea 
+name="comment" 
+rows="3" 
+placeholder="Комментарий">
+</textarea>
+
+
+<label class="apply-check">
+
+<input type="checkbox" name="agree" required />
+
+<span>
+Согласен с обработкой персональных данных
+</span>
+
+</label>
+
+
+<button type="submit" class="btn btn--primary">
+<i class="fas fa-paper-plane"></i>
+Отправить заявку
+</button>
+
+
+</form>
+
+
+</div>
+
+</section>
 <section class="section">
     <div class="container">
 
